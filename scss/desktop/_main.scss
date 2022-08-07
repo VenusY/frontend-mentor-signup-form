@@ -1,0 +1,61 @@
+@use "../util/functions" as u;
+@use "../util/mixins" as m;
+
+@media screen and (min-width: 1440px) {
+  // Typography
+
+  #text-block {
+    text-align: start;
+
+    &__heading {
+      font-size: u.rem(50);
+      line-height: 1.1;
+    }
+
+    &__description {
+      line-height: 1.7;
+    }
+  }
+
+  // Layout
+
+  main {
+    @include m.center-object;
+    @include m.margin-padding-reset;
+    max-width: none;
+    height: 100vh;
+  }
+
+  #text-block {
+    width: 500px;
+    margin: 0 70px 0 0;
+
+    &__heading {
+      margin-bottom: u.rem(26);
+    }
+  }
+
+  #banner {
+    margin-bottom: u.rem(22);
+  }
+
+  #form-container {
+    width: 540px;
+  }
+
+  #form {
+    padding: 40px;
+
+    .form__container {
+      margin-bottom: u.rem(20);
+
+      input {
+        padding: 0 30px;
+      }
+    }
+
+    &__submit-button {
+      margin-bottom: u.rem(14);
+    }
+  }
+}

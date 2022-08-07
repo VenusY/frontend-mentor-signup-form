@@ -1,0 +1,182 @@
+@use "../util/functions" as u;
+@use "../util/mixins" as m;
+
+//  Typography
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#text-block {
+  color: white;
+  text-align: center;
+
+  &__heading {
+    font-size: u.rem(26);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__description {
+    line-height: 1.6;
+  }
+}
+
+#banner {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+
+  &__text--bold {
+    font-weight: 600;
+  }
+}
+
+#form {
+  input {
+    font-size: u.rem(14);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--dark-blue);
+  }
+
+  .form__error-message {
+    font-size: u.rem(10);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--red);
+    text-align: right;
+  }
+
+  &__submit-button {
+    font-size: u.rem(16);
+    font-weight: 500;
+    color: white;
+  }
+
+  #form__success-message {
+    font-size: u.rem(14);
+    font-weight: 500;
+    color: var(--green);
+    text-align: center;
+  }
+
+  &__statement {
+    font-size: u.rem(11);
+    color: var(--grayish-blue);
+    line-height: 1.9;
+    text-align: center;
+
+    &--highlighted {
+      @include m.remove-link-styles;
+      font-weight: 700;
+      color: var(--red);
+    }
+  }
+}
+
+// Styling
+
+body {
+  background: url("../images/bg-intro-mobile.png"), var(--red);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+#banner {
+  background: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+#form {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+
+  input {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+  }
+
+  &__submit-button {
+    background: var(--green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Layout
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: u.rem(92) 24px;
+}
+
+#text-block {
+  margin-bottom: u.rem(62);
+
+  &__heading {
+    margin-bottom: u.rem(22);
+  }
+}
+
+#banner {
+  margin-bottom: u.rem(24);
+  padding: u.rem(18) 50px;
+}
+
+#form {
+  padding: 24px;
+
+  .form__container {
+    margin-bottom: u.rem(16);
+    position: relative;
+
+    input {
+      width: 100%;
+      height: u.rem(56);
+      padding: 0 20px;
+    }
+
+    .form__error-message {
+      margin-top: u.rem(8);
+    }
+
+    .form__error-message--hidden {
+      display: none;
+    }
+
+    .form__error-icon {
+      width: u.rem(24);
+      position: absolute;
+      top: u.rem(16);
+      right: 30px;
+    }
+
+    .form__error-icon--hidden {
+      display: none;
+    }
+  }
+
+  &__submit-button {
+    width: 100%;
+    margin-bottom: u.rem(12);
+    padding: u.rem(15) 40px;
+  }
+
+  #form__success-message {
+    margin-bottom: u.rem(16);
+  }
+
+  .form__success-message--hidden {
+    display: none;
+  }
+
+  &__statement {
+    padding: 0 20px;
+  }
+}

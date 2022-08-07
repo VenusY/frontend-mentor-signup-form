@@ -1,0 +1,36 @@
+#form input:focus-visible {
+  border: 1px solid #605692;
+  outline: none;
+}
+
+#form .form__input-field--invalid {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+#form .form__input-field--invalid::placeholder {
+  color: var(--red);
+}
+
+#form .form__input-field--invalid:focus-visible {
+  border: 2px solid var(--red);
+}
+
+#form__submit-button:hover {
+  cursor: pointer;
+  background: #77e2b4;
+}
+
+#form__submit-button:focus-visible {
+  background: #77e2b4;
+  outline: 2px solid black;
+}
+
+#form__statement--highlighted:hover,
+#form__statement--highlighted:focus {
+  text-decoration: underline;
+}
+
+#form__statement--highlighted:active {
+  color: #e66767;
+}
