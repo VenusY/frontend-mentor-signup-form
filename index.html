@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <section id="text-block">
+        <h1 id="text-block__heading">Learn to code by watching others</h1>
+        <p id="text-block__description">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+
+      <div id="form-container">
+        <div id="banner">
+          <span id="banner__text--bold">Try it free 7 days</span> then $20/mo.
+          thereafter
+        </div>
+
+        <form novalidate id="form">
+          <div class="form__container">
+            <input
+              type="text"
+              placeholder="First Name"
+              autocomplete="given-name"
+              name="first-name"
+              id="form__first-name"
+            />
+            <p class="form__error-message form__error-message--hidden">
+              First Name cannot be empty
+            </p>
+            <img
+              src="images/icon-error.svg"
+              alt="Error icon"
+              class="form__error-icon form__error-icon--hidden"
+            />
+          </div>
+
+          <div class="form__container">
+            <input
+              type="text"
+              placeholder="Last Name"
+              autocomplete="family-name"
+              name="last-name"
+              id="form__last-name"
+            />
+            <p class="form__error-message form__error-message--hidden">
+              Last Name cannot be empty
+            </p>
+            <img
+              src="images/icon-error.svg"
+              alt="Error icon"
+              class="form__error-icon form__error-icon--hidden"
+            />
+          </div>
+
+          <div class="form__container">
+            <input
+              type="email"
+              placeholder="Email Address"
+              autocomplete="email"
+              name="email"
+              id="form__email"
+            />
+            <p class="form__error-message form__error-message--hidden">
+              Looks like this is not an email
+            </p>
+            <img
+              src="images/icon-error.svg"
+              alt="Error icon"
+              class="form__error-icon form__error-icon--hidden"
+            />
+          </div>
+
+          <div class="form__container">
+            <input
+              type="password"
+              placeholder="Password"
+              autocomplete="new-password"
+              name="password"
+              id="form__password"
+            />
+            <p class="form__error-message form__error-message--hidden">
+              Password cannot be empty
+            </p>
+            <img
+              src="images/icon-error.svg"
+              alt="Error icon"
+              class="form__error-icon form__error-icon--hidden"
+            />
+          </div>
+
+          <button type="submit" id="form__submit-button">
+            CLAIM YOUR FREE TRIAL
+          </button>
+
+          <p class="form__success-message--hidden" id="form__success-message">
+            Your free trial has been activated. Enjoy!
+          </p>
+
+          <p id="form__statement">
+            By clicking the button, you are agreeing to our
+            <a href="#" id="form__statement--highlighted">
+              Terms&nbsp;and&nbsp;Services
+            </a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
