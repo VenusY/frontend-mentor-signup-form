@@ -25,4 +25,4 @@ For the desktop version of the webpage, the content was centered on the page usi
 
 Error icons were positioned inside the input field using `position: relative;` on the input field container and `position: absolute;` on the icons themselves.
 
-Instead of using a media query, JS was used to apply `padding: 80px` and `height: auto;` to the `<main>` tag when the height of the content exceeds the height of the viewport.
+Instead of using a media query, JS was used to apply `padding: 80px;` and `height: auto;` to the `<main>` tag when the height of the content exceeds the height of the viewport.
